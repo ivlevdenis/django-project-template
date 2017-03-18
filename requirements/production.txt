@@ -1,2 +1,1 @@
 -r common.txt
-newrelic==2.80.1.61
