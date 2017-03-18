@@ -1,10 +1,8 @@
 # Django 1.10+ project template
 
-[![Dependency Status](https://gemnasium.com/jpadilla/django-project-template.svg)](https://gemnasium.com/jpadilla/django-project-template)
+[![Dependency Status](https://gemnasium.com/badges/github.com/ivlevdenis/django-vuejs-project-template.svg)](https://gemnasium.com/github.com/ivlevdenis/django-vuejs-project-template)
 
-This is a simple Django 1.10+ project template with my preferred setup. Most Django project templates make way too many assumptions or are just way too complicated. I try to make the least amount of assumptions possible while still trying provide a useful setup. Most of my projects are deployed to Heroku, so this is optimized for that but is not necessary.
-
-**Note**: If you're looking for the previous Django 1.7+ project template layout check out the [1.7](https://github.com/jpadilla/django-project-template/tree/1.7) branch.
+This is a simple Django 1.10+ project template with preferred setup and files for use Django Channels and Vue.js. Most Django project templates make way too many assumptions or are just way too complicated. I try to make the least amount of assumptions possible while still trying provide a useful setup.
 
 ## Features
 
@@ -14,14 +12,16 @@ This is a simple Django 1.10+ project template with my preferred setup. Most Dja
 - Load environment variables from `.env` with [django-dotenv](https://github.com/jpadilla/django-dotenv).
 - Collection of custom extensions with [django-extensions](http://django-extensions.readthedocs.org).
 - HTTPS and other security related settings on Staging and Production.
-- Procfile for running gunicorn with New Relic's Python agent.
+- Simple routing file for Django Channels.
+- ASGI config file for Daphne. 
+- Procfile for running Daphne.
 - PostgreSQL database support with psycopg2.
 
 ## How to install
 
 ```bash
 $ django-admin.py startproject \
-  --template=https://github.com/jpadilla/django-project-template/archive/master.zip \
+  --template=https://github.com/ivlevdenis/django-vuejs-project-template/archive/master.zip \
   --name=Procfile \
   --extension=py,md,env \
   project_name
@@ -72,7 +72,7 @@ $ heroku config:set DJANGO_SECRET_KEY=`./manage.py generate_secret_key`
 
 The MIT License (MIT)
 
-Copyright (c) 2012-2016 José Padilla
+Copyright (c) 2017 Denis Ivlev
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
