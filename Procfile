@@ -1,1 +1,3 @@
-web: newrelic-admin run-program gunicorn -b "0.0.0.0:$PORT" -w 3 {{ project_name }}.wsgi
+web: daphne main.asgi:channel_layer --bind 0.0.0.0 -- port "$PORT" -v 2
+http_worker: python manage.py runworker --threads 4 --only-channels=http.*
+websocket_worker: python manage.py runworker --threads 4 --only-channels=websocket.*
