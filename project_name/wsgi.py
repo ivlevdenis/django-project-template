@@ -7,13 +7,12 @@ https://docs.djangoproject.com/en/{{ docs_version }}/howto/deployment/wsgi/
 import os
 import dotenv
 
-
 try:
-    dotenv.read_dotenv(
-        os.path.join(os.path.dirname(os.path.dirname(__file__)), '.env'))
-except Exception as e:
+    env_filename = os.path.join(
+        os.path.dirname(os.path.dirname(__file__)), '.env'
+    )
+    dotenv.read_dotenv(env_filename)except Exception as e:
     print(e)
-
 
 ENVIRONMENT = os.getenv('ENVIRONMENT')
 

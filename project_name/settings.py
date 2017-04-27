@@ -32,7 +32,7 @@ class Common(Configuration):
         'django.contrib.sessions',
         'django.contrib.messages',
         'django.contrib.staticfiles',
-
+        # 3rd party apps
         'django_extensions',
         'debug_toolbar',
     ]
@@ -69,9 +69,7 @@ class Common(Configuration):
 
     # Database
     # https://docs.djangoproject.com/en/{{ docs_version }}/ref/settings/#databases
-    DATABASES = values.DatabaseURLValue(
-        'sqlite:///{}'.format(os.path.join(BASE_DIR, 'db.sqlite3'))
-    )
+    DATABASES = values.DatabaseURLValue('sqlite:///{}'.format(os.path.join(BASE_DIR, 'db.sqlite3')))
 
     # Password validation
     # https://docs.djangoproject.com/en/{{ docs_version }}/ref/settings/#auth-password-validators
@@ -115,13 +113,9 @@ class Development(Common):
 
     ALLOWED_HOSTS = []
 
-    INTERNAL_IPS = [
-        '127.0.0.1'
-    ]
+    INTERNAL_IPS = ['127.0.0.1']
 
-    MIDDLEWARE = Common.MIDDLEWARE + [
-        'debug_toolbar.middleware.DebugToolbarMiddleware'
-    ]
+    MIDDLEWARE = Common.MIDDLEWARE + ['debug_toolbar.middleware.DebugToolbarMiddleware']
 
 
 class Staging(Common):
@@ -137,9 +131,7 @@ class Staging(Common):
     SECURE_REDIRECT_EXEMPT = values.ListValue([])
     SECURE_SSL_HOST = values.Value(None)
     SECURE_SSL_REDIRECT = values.BooleanValue(True)
-    SECURE_PROXY_SSL_HEADER = values.TupleValue(
-        ('HTTP_X_FORWARDED_PROTO', 'https')
-    )
+    SECURE_PROXY_SSL_HEADER = values.TupleValue(('HTTP_X_FORWARDED_PROTO', 'https'))
 
 
 class Production(Staging):

@@ -8,13 +8,13 @@ import os
 import dotenv
 import channels.asgi
 
-
 try:
-    dotenv.read_dotenv(
-        os.path.join(os.path.dirname(os.path.dirname(__file__)), '.env'))
+    env_filename = os.path.join(
+        os.path.dirname(os.path.dirname(__file__)), '.env'
+    )
+    dotenv.read_dotenv(env_filename)
 except Exception as e:
     print(e)
-
 
 ENVIRONMENT = os.getenv('ENVIRONMENT')
 
