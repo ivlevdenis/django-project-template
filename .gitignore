@@ -77,6 +77,8 @@ docs/_build/
 # PyBuilder
 target/
 
+# Idea
+.idea
 
 ### Django ###
 *.log
@@ -87,3 +89,6 @@ local_settings.py
 
 .env
 db.sqlite3
+*.sublime-project
+*.sublime-workspace
+
