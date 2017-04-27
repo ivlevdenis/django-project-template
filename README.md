@@ -1,4 +1,4 @@
-# Django 1.10+ project template
+# Django 1.11+ project template
 
 [![Dependency Status](https://gemnasium.com/badges/github.com/ivlevdenis/django-vuejs-project-template.svg)](https://gemnasium.com/github.com/ivlevdenis/django-vuejs-project-template)
 
@@ -6,7 +6,7 @@ This is a simple Django 1.10+ project template with preferred setup and files fo
 
 ## Features
 
-- Django 1.10
+- Django 1.11
 - Development, Staging and Production settings with [django-configurations](https://django-configurations.readthedocs.org).
 - Get value insight and debug information while on Development with [django-debug-toolbar](https://django-debug-toolbar.readthedocs.org).
 - Load environment variables from `.env` with [django-dotenv](https://github.com/jpadilla/django-dotenv).
