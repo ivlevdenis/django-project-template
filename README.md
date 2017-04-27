@@ -2,7 +2,7 @@
 
 [![Dependency Status](https://gemnasium.com/badges/github.com/ivlevdenis/django-vuejs-project-template.svg)](https://gemnasium.com/github.com/ivlevdenis/django-vuejs-project-template)
 
-This is a simple Django 1.10+ project template with preferred setup and files for use Django Channels and Vue.js. Most Django project templates make way too many assumptions or are just way too complicated. I try to make the least amount of assumptions possible while still trying provide a useful setup.
+This is a simple Django 1.11+ project template with preferred setup and files for use Django Channels and Vue.js. Most Django project templates make way too many assumptions or are just way too complicated. I try to make the least amount of assumptions possible while still trying provide a useful setup.
 
 ## Features
 
