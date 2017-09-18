@@ -1,9 +1,9 @@
 Django==1.11.5
 djangorestframework==3.6.4
-channels==1.1.6
+channels==1.1.8
 dj-database-url==0.4.2
 django-configurations==2.0.0
 django-debug-toolbar==1.8
 django-dotenv==1.4.1
-django-extensions==1.8.1
+django-extensions==1.9.1
 psycopg2==2.7.3
